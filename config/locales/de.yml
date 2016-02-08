@@ -1,0 +1,21 @@
+de:
+  attributes:
+    tag_list: Tags
+  activerecord:
+    attributes:
+      ecm/tags/tag:
+        name: Name
+        taggings_count: Getagte Objekte
+      ecm/tags/tagging:
+        tag: Tag
+        taggable: Getagtes Objekt
+        tagger: Ersteller
+        created_at: Erstellt am
+        udpated_at: Aktualisiert am
+    model:
+      ecm/tags/tag:
+        one: Tag
+        other: Tags
+      ecm/tags/tag:
+        one: Tagging
+        other: Taggings
