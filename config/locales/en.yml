@@ -1,0 +1,25 @@
+en:
+  attributes:
+    tag_list: Tags
+  activerecord:
+    attributes:
+      ecm/tags/tag:
+        name: Name
+        taggings_count: Tagged Items
+      ecm/tags/tagging:
+        tag: Tag
+        taggable: Tagged Item
+        tagger: Tagger
+        created_at: Created at
+        udpated_at: Updated at
+    model:
+      ecm/tags/tag:
+        one: Tag
+        other: Tags
+      ecm/tags/tag:
+        one: Tagging
+        other: Taggings
+  helpers:
+    submit:
+      tag_search:
+        create: 'Search'

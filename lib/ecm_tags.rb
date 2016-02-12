@@ -1,4 +1,7 @@
 require 'acts-as-taggable-on'
+require 'haml-rails'
+require 'responders'
+require 'simple_form'
 
 require "ecm/tags"
 require "ecm/tags/engine"

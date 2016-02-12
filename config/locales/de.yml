@@ -19,3 +19,7 @@ de:
       ecm/tags/tag:
         one: Tagging
         other: Taggings
+  helpers:
+    submit:
+      tag_search:
+        create: 'Suchen'
