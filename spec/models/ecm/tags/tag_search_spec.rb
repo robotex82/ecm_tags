@@ -15,7 +15,7 @@ module Ecm::Tags
         @post.save!
         Ecm::Tags::TagSearch.new(tag_list: 'foo').do_work
       end
-      
+
       it 'should return a hash' do
         expect(subject).to be_a(Hash)
       end
@@ -31,7 +31,7 @@ module Ecm::Tags
         @post.save!
         Ecm::Tags::TagSearch.new(tag_list: 'f', fuzzy: true).do_work
       end
-      
+
       it 'should return a hash' do
         expect(subject).to be_a(Hash)
       end

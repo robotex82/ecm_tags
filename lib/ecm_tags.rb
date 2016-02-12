@@ -3,8 +3,8 @@ require 'haml-rails'
 require 'responders'
 require 'simple_form'
 
-require "ecm/tags"
-require "ecm/tags/engine"
+require 'ecm/tags'
+require 'ecm/tags/engine'
 
 require 'acts_as_taggable_on/tag'
 module ActsAsTaggableOn

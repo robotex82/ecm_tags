@@ -15,12 +15,12 @@ module Ecm::Tags
         say "Found #{resources.size} #{klass.constantize.model_name.human(count: :other)}:", indent: 1
         say resources.inspect, indent: 2
       end
-      say "done"
+      say 'done'
       output
     end
 
     def tag_list
-      @tag_list ||= String.new
+      @tag_list ||= ''
     end
 
     def result
@@ -62,7 +62,7 @@ module Ecm::Tags
     end
 
     def search
-      taggable_classes.each_with_object({}) { |klass, result| result[klass] = klass.constantize.tagged_with(tag_list.split(', '), any: any, wild: wild)  }
+      taggable_classes.each_with_object({}) { |klass, result| result[klass] = klass.constantize.tagged_with(tag_list.split(', '), any: any, wild: wild) }
     end
   end
 end
