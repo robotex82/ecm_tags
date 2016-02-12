@@ -1,4 +1,9 @@
-# desc "Explaining what the task does"
-# task :tags do
-#   # Task goes here
-# end
+namespace :ecm do
+  namespace :tags do
+    desc "Searches for things by tags"
+    task :tag_search, [:tag_list, :fuzzy] => [:environment] do |t, args|
+      Tenant.set_current_by_identifier ENV['TENANT']
+      Ecm::Tags::TagSearch.call(args)
+    end
+  end
+end

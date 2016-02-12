@@ -1,0 +1,9 @@
+= simple_form_for(@tag_search, url: ecm_tags.tag_searchs_path) do |f|
+  = f.input :tag_list
+  = f.input :fuzzy, as: :boolean
+
+#tag_search_result
+  - @result.each do |class_name, resources|
+    - next if resources.empty?
+    %h2= class_name.constantize.model_name.human(count: :other)
+    = render resources

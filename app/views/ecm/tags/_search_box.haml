@@ -1,0 +1,3 @@
+= simple_form_for(@tag_search, url: ecm_tags.tag_searchs_path, html: { class: 'navbar-form navbar-left' }) do |f|
+  = f.input :tag_list, label: false
+  = f.input :fuzzy, as: :boolean
