@@ -19,6 +19,10 @@ en:
       ecm/tags/tag:
         one: Tagging
         other: Taggings
+  ecm:
+    tags:
+      search_box:
+        search: "cats, tree, green, ..."
   helpers:
     submit:
       tag_search:
