@@ -27,3 +27,6 @@ en:
     submit:
       tag_search:
         create: 'Search'
+  routes:
+    mount:
+      ecm_tags: '/backend/tags'
