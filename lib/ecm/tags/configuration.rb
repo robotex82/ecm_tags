@@ -9,6 +9,7 @@ module Ecm
         yield self
       end
       mattr_accessor(:base_controller) { 'FrontendController' }
+      mattr_accessor(:add_submit_button_to_search_box) { true }
     end
   end
 end
