@@ -28,7 +28,7 @@ module Ecm
       end
 
       def permitted_params
-        params.require(:tag_search).permit(:tag_list, :fuzzy)
+        params.require(:tag_search).permit(:tag_list, :exact)
       end
     end
   end

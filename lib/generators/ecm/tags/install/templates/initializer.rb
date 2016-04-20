@@ -10,4 +10,10 @@ Ecm::Tags.configure do |config|
   # Default: config.add_submit_button_to_search_box = true
   # 
   config.add_submit_button_to_search_box = true
+
+  # Use exact search by default or not.
+  # 
+  # Default: config.tag_search_exact_default_value = false
+  # 
+  config.tag_search_exact_default_value = false
 end

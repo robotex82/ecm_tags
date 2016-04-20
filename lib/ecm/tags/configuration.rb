@@ -10,6 +10,7 @@ module Ecm
       end
       mattr_accessor(:base_controller) { 'FrontendController' }
       mattr_accessor(:add_submit_button_to_search_box) { true }
+      mattr_accessor(:tag_search_exact_default_value) { false }
     end
   end
 end

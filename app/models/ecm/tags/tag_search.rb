@@ -2,10 +2,16 @@ module Ecm::Tags
   class TagSearch
     include ActiveModel::Model
 
-    attr_accessor :tag_list, :result, :taggable_classes, :fuzzy
+    attr_accessor :tag_list, :result, :taggable_classes, :exact
+
+    validates :tag_list, presence: true
 
     def self.call(*args)
       new(*args).do_work
+    end
+
+    def self.i18n_scope
+      :activerecord
     end
 
     def do_work
@@ -36,12 +42,12 @@ module Ecm::Tags
       @taggable_classes ||= Ecm::Tags::Tagging.uniq.pluck(:taggable_type)
     end
 
-    def fuzzy
-      @fuzzy ||= false
+    def exact
+      @exact ||= Ecm::Tags::Configuration.tag_search_exact_default_value
     end
 
-    def fuzzy=(value)
-      @fuzzy = ActiveRecord::Type::Boolean.new.type_cast_from_database(value)
+    def exact=(value)
+      @exact = ActiveRecord::Type::Boolean.new.type_cast_from_database(value)
     end
 
     private
@@ -54,11 +60,11 @@ module Ecm::Tags
     end
 
     def wild
-      @wild ||= fuzzy
+      @wild ||= !exact
     end
 
     def any
-      @any ||= fuzzy
+      @any ||= !exact
     end
 
     def search

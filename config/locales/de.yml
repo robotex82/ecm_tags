@@ -12,6 +12,9 @@ de:
         tagger: Ersteller
         created_at: Erstellt am
         udpated_at: Aktualisiert am
+      ecm/tags/tag_search:
+        exact: Wortgenau
+        tag_list: Tags
     model:
       ecm/tags/tag:
         one: Tag

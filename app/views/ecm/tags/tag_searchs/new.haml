@@ -1,6 +1,6 @@
 = simple_form_for(@tag_search, url: ecm_tags.tag_searchs_path) do |f|
   = f.input :tag_list
-  = f.input :fuzzy, as: :boolean
+  = f.input :exact, as: :boolean
   = f.button :submit, class: 'btn btn-primary'
 
 #tag_search_result
