@@ -1,5 +1,5 @@
 # This migration comes from ecm_tags (originally 20160208121300)
-class CreateEcmTagsTaggings < ActiveRecord::Migration
+class CreateEcmTagsTaggings < ActiveRecord::Migration[4.2]
   def change
     create_table :ecm_tags_taggings do |t|
       t.integer  'tag_id'

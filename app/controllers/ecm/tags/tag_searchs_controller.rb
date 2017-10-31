@@ -13,7 +13,11 @@ module Ecm
       end
 
       def create
-        @tag_search = TagSearch.new(permitted_params)
+        if request.get?
+          @tag_search = TagSearch.new(tag_list: permitted_params)
+        else
+          @tag_search = TagSearch.new(permitted_params)
+        end
         @result = @tag_search.result
         respond_with @tag_search do |format|
           format.html { render :new }
@@ -28,7 +32,11 @@ module Ecm
       end
 
       def permitted_params
-        params.require(:tag_search).permit(:tag_list, :exact)
+        if request.get?
+          params.require(:tag)
+        else
+          params.require(:tag_search).permit(:tag_list, :exact)
+        end
       end
     end
   end

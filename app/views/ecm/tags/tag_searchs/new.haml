@@ -1,7 +1,8 @@
-= simple_form_for(@tag_search, url: ecm_tags.tag_searchs_path) do |f|
-  = f.input :tag_list
-  = f.input :exact, as: :boolean
-  = f.button :submit, class: 'btn btn-primary'
+- unless params[:tag].present?
+  = simple_form_for(@tag_search, url: ecm_tags.tag_searchs_path) do |f|
+    = f.input :tag_list
+    = f.input :exact, as: :boolean
+    = f.button :submit, class: 'btn btn-primary'
 
 #tag_search_result
   - @result.each do |class_name, resources|

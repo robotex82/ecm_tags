@@ -1,4 +1,6 @@
 de:
+  classes:
+    ecm/tags/engine: Tags
   attributes:
     tag_list: Tags
   activerecord:
@@ -15,11 +17,11 @@ de:
       ecm/tags/tag_search:
         exact: Wortgenau
         tag_list: Tags
-    model:
+    models:
       ecm/tags/tag:
         one: Tag
         other: Tags
-      ecm/tags/tag:
+      ecm/tags/tagging:
         one: Tagging
         other: Taggings
   ecm:
@@ -31,5 +33,4 @@ de:
       tag_search:
         create: 'Suchen'
   routes:
-    mount:
-      ecm_tags: '/backend/tags'
+    ecm_tags_engine: tags

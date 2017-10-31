@@ -16,4 +16,11 @@ Ecm::Tags.configure do |config|
   # Default: config.tag_search_exact_default_value = false
   # 
   config.tag_search_exact_default_value = false
+
+
+  # Specify the models to be tagged.
+  # 
+  # Default: config.taggable_models = %w()
+  # 
+  config.taggable_models = %w()
 end

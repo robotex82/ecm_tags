@@ -1,4 +1,6 @@
 en:
+  classes:
+    ecm/tags/engine: Tags
   attributes:
     tag_list: Tags
   activerecord:
@@ -28,5 +30,4 @@ en:
       tag_search:
         create: 'Search'
   routes:
-    mount:
-      ecm_tags: '/backend/tags'
+    ecm_tags_engine: tags

@@ -1,7 +1,13 @@
 Ecm::Tags::Engine.routes.draw do
-  resources :tag_searchs, only: [:new, :create] do
-    get '/', on: :collection, to: "tag_searchs#create"
-  end
+  localized do
+    scope :ecm_tags_engine do
+      resources :tag_searchs, only: [:new, :create] do
+        get '/', on: :collection, to: "tag_searchs#create"
+      end
 
-  root to: 'tag_searchs#new'
+      get '/:tag', to: "tag_searchs#create", as: 'tag'
+
+      root to: 'tag_searchs#new'
+    end
+  end
 end

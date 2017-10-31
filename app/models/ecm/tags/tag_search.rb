@@ -39,7 +39,7 @@ module Ecm::Tags
     end
 
     def taggable_classes
-      @taggable_classes ||= Ecm::Tags::Tagging.uniq.pluck(:taggable_type)
+      @taggable_classes ||= Ecm::Tags::Tagging.distinct.pluck(:taggable_type)
     end
 
     def exact
@@ -47,7 +47,11 @@ module Ecm::Tags
     end
 
     def exact=(value)
-      @exact = ActiveRecord::Type::Boolean.new.type_cast_from_database(value)
+      if Rails.version < '5.1'
+        @exact = ActiveRecord::Type::Boolean.new.type_cast_from_database(value)
+      else
+        @exact = ActiveRecord::Type::Boolean.new.cast(value)
+      end
     end
 
     private

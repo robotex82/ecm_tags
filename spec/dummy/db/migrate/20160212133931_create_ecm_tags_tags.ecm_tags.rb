@@ -1,5 +1,5 @@
 # This migration comes from ecm_tags (originally 20160208121254)
-class CreateEcmTagsTags < ActiveRecord::Migration
+class CreateEcmTagsTags < ActiveRecord::Migration[4.2]
   def change
     create_table :ecm_tags_tags do |t|
       t.string  'name'
