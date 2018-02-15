@@ -1,4 +1,2 @@
 
-  localized do
-    mount Ecm::Tags::Engine, at: '/tags'
-  end
+    mount Ecm::Tags::Engine, at: '/'
