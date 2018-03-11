@@ -6,21 +6,26 @@ Ecm::Tags.configure do |config|
   config.base_controller = '<%= base_controller_class_name %>'
 
   # Add a submit button to the tag search box.
-  # 
+  #
   # Default: config.add_submit_button_to_search_box = true
   # 
   config.add_submit_button_to_search_box = true
 
   # Use exact search by default or not.
-  # 
+  #
   # Default: config.tag_search_exact_default_value = false
   # 
   config.tag_search_exact_default_value = false
 
-
   # Specify the models to be tagged.
   # 
-  # Default: config.taggable_models = %w()
+  # Default: config.taggable_class_names = %w()
+  #
+  config.taggable_class_names = %w()
+
+  # Specify the models the can tag things.
   # 
-  config.taggable_models = %w()
+  # Default: config.tagger_class_names = %w()
+  #
+  config.tagger_class_names = %w()
 end
