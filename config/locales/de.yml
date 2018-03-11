@@ -4,19 +4,6 @@ de:
   attributes:
     tag_list: Tags
   activerecord:
-    attributes:
-      ecm/tags/tag:
-        name: Name
-        taggings_count: Getagte Objekte
-      ecm/tags/tagging:
-        tag: Tag
-        taggable: Getagtes Objekt
-        tagger: Ersteller
-        created_at: Erstellt am
-        udpated_at: Aktualisiert am
-      ecm/tags/tag_search:
-        exact: Wortgenau
-        tag_list: Tags
     models:
       ecm/tags/tag:
         one: Tag
@@ -24,6 +11,29 @@ de:
       ecm/tags/tagging:
         one: Tagging
         other: Taggings
+    attributes:
+      ecm/tags/tag:
+        id: ID
+        color: Farbe
+        name: Name
+        taggings_count: Getagte Objekte
+      ecm/tags/tagging:
+        id: ID
+        color: Farbe
+        context: Kontext
+        tag_id: Tag
+        tag: Tag
+        taggable_id: Getagtes Objekt
+        taggable: Getagtes Objekt
+        taggable_type: Getagtes Objekt-Typ
+        tagger_id: Ersteller
+        tagger: Ersteller
+        tagger_type: Ersteller-Typ
+        created_at: Erstellt am
+        updated_at: Aktualisiert am
+      ecm/tags/tag_search:
+        exact: Wortgenau
+        tag_list: Tags
   ecm:
     tags:
       search_box:
