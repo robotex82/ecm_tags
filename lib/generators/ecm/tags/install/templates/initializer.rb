@@ -22,10 +22,4 @@ Ecm::Tags.configure do |config|
   # Default: config.taggable_class_names = %w()
   #
   config.taggable_class_names = %w()
-
-  # Specify the models the can tag things.
-  # 
-  # Default: config.tagger_class_names = %w()
-  #
-  config.tagger_class_names = %w()
 end
